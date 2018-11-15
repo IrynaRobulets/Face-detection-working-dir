@@ -3,6 +3,5 @@
 /data/
 /data_process/
 /trained_models/
-/models
 /config/*.bcp.config
 /.DS_Store
