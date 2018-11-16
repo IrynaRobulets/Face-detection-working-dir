@@ -47,6 +47,8 @@ fi
 cp config/${PIPELINE_CONFIG}.config config/${PIPELINE_CONFIG}.bcp.config
 #echo sed -i "s|fine_tune_checkpoint:.+?\n|fine_tune_checkpoint: "${CHECKPOINT_DIR}\model.ckpt"\n|g" \
 perl -p -i -e "s|fine_tune_checkpoint:.+?\n|fine_tune_checkpoint: \"${CHECKPOINT_DIR}/model.ckpt\"\n|g" config/${PIPELINE_CONFIG}.config
+perl -p -i -e "s|GS_BUCKET|${gs_bucket}|g" config/${PIPELINE_CONFIG}.config
+perl -p -i -e "s|MODELDATE|${MODELDATE}|g" config/${PIPELINE_CONFIG}.config
 
 gsutil cp config/${PIPELINE_CONFIG}.config $gs_bucket/config/
 

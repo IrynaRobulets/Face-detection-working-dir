@@ -1,7 +1,7 @@
 r"""Convert raw WIDERFACE dataset to TFRecord for object_detection.
 
 Example usage:
-    python object_detection/dataset_tools/create_widerface_tf_record.py \
+    python create_widerface_tf_record.py \
         --input_dir=/home/user/wider_face \
         --output_dir=/home/user/wider_face.record
 """
