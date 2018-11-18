@@ -74,3 +74,11 @@ gcloud projects add-iam-policy-binding $PROJECT --member serviceAccount:$TPU_ACC
 
 #gsutil acl ch -u service-906872764684@cloud-tpu.iam.gserviceaccount.com:READER $gs_bucket
 #gsutil acl ch -u service-906872764684@cloud-tpu.iam.gserviceaccount.com:WRITER $gs_bucket
+
+
+
+git rm --cached -r checkpoints/ssd_mobilenet_v1_coco_11_06_2017
+git rm --cached -r checkpoints/ssd_mobilenet_v1_coco_2018_01_28
+git rm --cached -r checkpoints/ssd_mobilenet_v1_ppn_shared_box_predictor_300x300_coco14_sync_2018_07_03
+git rm --cached -r checkpoints/ssd_mobilenet_v2_coco_2018_03_29
+git rm --cached -r checkpoints/ssdlite_mobilenet_v2_coco_2018_05_09
